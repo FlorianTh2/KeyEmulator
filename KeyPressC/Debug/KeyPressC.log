@@ -1,0 +1,5 @@
+﻿  KeyPressC.cpp
+C:\Users\Florian\source\repos\KeyPressC\KeyPressC\KeyPressC.cpp(7,1): warning C4005: 'WINVER': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\sdkddkver.h(238): message : see previous definition of 'WINVER'
+C:\Users\Florian\source\repos\KeyPressC\KeyPressC\KeyPressC.cpp(75,19): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
+  KeyPressC.vcxproj -> C:\Users\Florian\source\repos\KeyPressC\Debug\KeyPressC.exe
