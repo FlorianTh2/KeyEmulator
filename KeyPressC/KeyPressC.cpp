@@ -1,14 +1,11 @@
-// KeyPressC.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <windows.h>
 
 #define WINVER 0x0500
 
 
-// msdn.microsoft.com/en-us/library/dd375731
-// Sleep(2500);
+// virutal key-hex-codes can be found here
+//   msdn.microsoft.com/en-us/library/dd375731
 int main()
 {
     std::cout << "Program running...\n";
@@ -18,7 +15,7 @@ int main()
     // if only one event is needed: use INPUT keyboardInput; and remove array syntax in following code
     INPUT keyboardInput[2];
 
-    // Set up a generic keyboard event.
+    // set up keyboard event
     keyboardInput[0].type = INPUT_KEYBOARD;
     keyboardInput[0].ki.wScan = 0;
     keyboardInput[0].ki.time = 0;
@@ -27,7 +24,7 @@ int main()
     // key press
     keyboardInput[0].ki.dwFlags = 0;
 
-    // Release
+    // key release
     keyboardInput[1].type = INPUT_KEYBOARD;
     keyboardInput[1].ki.wScan = 0; // hardware scan code for key
     keyboardInput[1].ki.time = 0;
@@ -37,10 +34,9 @@ int main()
 
 
     // mouseclick
-    // 1 mousemovement = 1 x up oder 1 x down
     int const clicks = 1;
     INPUT mouseInput[clicks * 2];
-    // zeroMemory usage recommended according to stackoverflow to prevent blackscreen
+    // zeroMemory usage recommended according to prevent blackscreen
     // initialized several variables to prevent blackscreen
     ZeroMemory(&mouseInput, sizeof(mouseInput));
 
